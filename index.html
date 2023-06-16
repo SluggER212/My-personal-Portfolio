@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slugger - My Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(56, 56, 68);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(45, 45, 48);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(163, 116, 163);
+            font-size: 1.1rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #8169818c;
+            height: 1.5px;
+            margin: 60px 70px;
+        }
+
+        .left {
+            font-size: 1.4rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2.2rem;
+        }
+
+        .leftSection .button {
+            padding: 50px 0;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #323242;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .leftSection .btn:hover {
+            font-size: 16px;
+            background: #414153;
+        }
+
+        .rightSetion img {
+            width: 80%;
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        #element {
+            color: blueviolet;
+        }
+
+        .secondSection {
+            width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.8rem;
+        }
+
+        .text-grey {
+            color: grey;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            background: white;
+            height: 93px;
+            width: 1px;
+            margin: 0 6vw;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 14px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: grey;
+            width: 150px;
+            font-size: 0.7rem;
+        }
+
+        footer {
+            background-color: rgb(65 65 76);
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style-type: none;
+        }
+
+        .footer a {
+            list-style: none;
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer a img {
+            list-style: none;
+            text-decoration: none;
+            width: 20px;
+            padding: 10px;
+        }
+
+        .footer a img:hover {
+            background: white;
+            font-size: 1.1rem;
+            border: 0px solid white;
+            border-radius: 30%;
+        }
+
+        .footer>div {
+            width: 233px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: grey;
+            padding: 12px 0;
+        }
+
+        /*Responsive Css*/
+        @media screen and (max-width: 1350px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            .box {
+                flex-direction: column;
+            }
+
+            .secondSection .box {
+
+                width: 50vw;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                left: 45px;
+            }
+
+            .secondSection .vertical {
+                height: unset;
+            }
+
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .rightSection {
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSection img {
+                width: 45vw;
+                margin-bottom: 50px;
+            }
+
+            .leftSection {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .secondSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+            }
+
+            body {
+                min-width: fit-content;
+            }
+            .image-top{
+                top: 115px;
+            }
+        }
+
+        @media screen and (max-width: 440px) {
+            .rightSection img {
+                width: 113px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Slugger's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                <div>Hi, I am <span class="purple">Slugger</span></div>
+                <div>And I am a passionate
+                    <span id="element"></span>
+                </div>
+                <button class="btn" id="downloadBtn">Download CV</button>
+                <button class="btn" id="githubBtn">GitHub</button>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="Dev image">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-grey">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img src="logoRR.ico" alt="" class="image-top">
+                    <div class="vertical-title">Royal Research (Feb, 2021)</div>
+                    <div class="vertical-desc">Academic Content Writer</div>
+                </div>
+                <div class="vertical">
+                    <img src="mileS.png" alt="" class="image-top">
+                    <div class="vertical-title">Freelance Content writer (May,2021)</div>
+                    <div class="vertical-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+                        facere!</div>
+                </div>
+                <div class="vertical">
+                    <img src="mileS.png" alt="" class="image-top">
+                    <div class="vertical-title">Freelance Web Developer (Jan,2022)</div>
+                    <div class="vertical-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus impedit
+                        magni totam!</div>
+                </div>
+                <div class="vertical">
+                    <img src="logoCH.png" alt="" class="image-top">
+                    <div class="vertical-title">Cloudhub Digital Consultant Pvt Ltd.(Mar,2023)</div>
+                    <div class="vertical-desc">Software Developer | Front-end developer| React js developer</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Slugger's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li>About</li>
+                    <li>Skills</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <a href="https://www.facebook.com/sourav.dewanji.3" target="_blank"><img src="fb.png" alt=""></a>
+                <a href="https://www.instagram.com/slugger.jsx/" target="_blank"><img src="insta.png" alt=""></a>
+                <a href="https://twitter.com/Slugger73811519" target="_blank"><img src="tweet.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/sourav-dewanji-7278b8239/" target="_blank"><img src="link.png"
+                        alt=""></a>
+
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright © sluggersportfolio.com | All Rights Reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Freelance Content Writer.', 'React js deloper.', 'Front-end Web Developer.'],
+            typeSpeed: 50,
+        });
+
+        // Get the button element
+        var downloadBtn = document.getElementById('downloadBtn');
+
+        // Add click event listener to the button
+        downloadBtn.addEventListener('click', function () {
+            // Create a dummy anchor element
+            var link = document.createElement('a');
+
+            // Set the href attribute to the file you want to download
+            link.href = 'CV.pdf';
+
+            // Set the "download" attribute to specify the filename
+            link.setAttribute('download', 'Slugger_cv.pdf');
+
+            // Append the anchor element to the body
+            document.body.appendChild(link);
+
+            // Trigger a click event on the anchor element
+            link.click();
+
+            // Remove the anchor element from the body
+            document.body.removeChild(link);
+        });
+
+        // Get the button element
+        var githubBtn = document.getElementById('githubBtn');
+
+        // Add click event listener to the button
+        githubBtn.addEventListener('click', function () {
+            // Open the GitHub link in a new page or tab
+            window.open('https://github.com/SluggER212', '_blank');
+        });
+    </script>
+</body>
+
+</html>
